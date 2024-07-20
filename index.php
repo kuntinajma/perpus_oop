@@ -11,7 +11,7 @@ if (!isset($_SESSION['login_user'])) {
 $database = new Database();
 $db = $database->getConnection();
 
-class Dashboard {
+class index {
     private $conn;
 
     public function __construct($db) {
@@ -40,19 +40,19 @@ class Dashboard {
     }
 }
 
-$dashboard = new Dashboard($db);
+$index = new index($db);
 
-$totalMahasiswa = $dashboard->getTotalMahasiswa();
-$totalBuku = $dashboard->getTotalBuku();
-$bukuTersedia = $dashboard->getBukuTersedia();
-$aktivitas = $dashboard->getAktivitas();
+$totalMahasiswa = $index->getTotalMahasiswa();
+$totalBuku = $index->getTotalBuku();
+$bukuTersedia = $index->getBukuTersedia();
+$aktivitas = $index->getAktivitas();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>index</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <style>
@@ -100,7 +100,7 @@ $aktivitas = $dashboard->getAktivitas();
 <body>
     <div class="sidebar">
         <h2 class="text-center">e-library</h2>
-        <a href="dashboard.php">Dashboard</a>
+        <a href="index.php">index</a>
         <a href="data_mahasiswa.php">Data Mahasiswa</a>
         <a href="data_buku.php">Data Buku</a>
         <a href="peminjaman.php">Peminjaman</a>

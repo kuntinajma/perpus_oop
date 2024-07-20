@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($user->login()) {
         $_SESSION['login_user'] = $user->email;
         $_SESSION['email'] = $user->email;
-        header("location: dashboard.php");
+        header("location: .php");
     } else {
         $error = "Email atau Password tidak valid";
     }

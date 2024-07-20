@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="sidebar">
         <h2 class="text-center">e-library</h2>
-        <a href="dashboard.php">Dashboard</a>
+        <a href="index.php">index</a>
         <a href="data_mahasiswa.php">Data Mahasiswa</a>
         <a href="data_buku.php">Data Buku</a>
         <a href="peminjaman.php">Peminjaman</a>
